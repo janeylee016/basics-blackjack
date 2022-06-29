@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin-left: 30px;
+  margin-right: 30px;
+  background-color: white;
+  color: black; /* sets the font color */
+  background-image: url(""); /* The image used */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+#output-div img {
+  /* display: block; */
+  max-width: 100%;
+  max-height: 200px;
+  margin-right: 10px;
+}
+
+#output-div .player-hand {
+  margin-right: 10px;
+}
+
+.header {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+#container {
+  background-color: grey;
+  margin: 40px auto;
+  max-width: 1000px;
+  padding: 38px 31px;
+}
+
+input {
+  font-size: 21px;
+  line-height: 33px;
+  margin: 0 0 23px 0;
+  padding: 0 9px;
+  width: 100%;
+}
+
+button {
+  font-size: 21px;
+  line-height: 33px;
+  margin: 0 0 23px 0;
+  padding: 0 6px;
+}
+
+#output-div {
+  background-color: lightgrey;
+  margin: 20px auto;
+  padding: 20px;
+  width: 100%;
+}
+
+.logo-img {
+  height: 49px;
+  position: relative;
+  top: 22px;
+}
+
+/* increase header font size on wider screens */
+@media screen and (min-width: 600px) {
+  .header {
+    font-size: 2rem;
+  }
+}
+
+#dealer-cards img {
+  height: 175px;
+  width: 125px;
+  margin: 1px;
+}
+
+#player-cards img {
+  height: 175px;
+  width: 125px;
+  margin: 1px;
+}
+
+table.tb {
+  width: 400px;
+  border-collapse: collapse;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+}
+.tb th,
+.tb td {
+  /* border: solid 1px #777; */
+  /* padding: 5px; */
+  text-align: center;
+  /* background-color: white; */
+}
+.tb thead {
+  background-color: white;
+}
+
+#score-board {
+  margin: 20px auto;
+  /* padding: 20px; */
+  margin: 40px auto;
+  max-width: 1000px;
+  /* margin-right: 0px;
+  margin-left: auto; */
+}
