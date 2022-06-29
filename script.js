@@ -606,8 +606,6 @@ var main = function (input) {
     noWins = 0;
     scoreBoardOutput(dealerWins, playerWins, ties, noWins);
     outputMessage = "";
-
-    console.log("restart1");
   }
 
   // First click
@@ -617,7 +615,323 @@ var main = function (input) {
     //create the game card
     gameDeck = createNewDeck();
 
-    console.log("LENGTH", gameDeck.length);
+    if (gameDeck.length < 8) {
+      makeDeck = [
+        {
+          name: "ace",
+          suit: "hearts",
+          rank: 1,
+          image: "cards/A-H.png",
+        },
+        {
+          name: "2",
+          suit: "hearts",
+          rank: 2,
+          image: "cards/2-H.png",
+        },
+        {
+          name: "3",
+          suit: "hearts",
+          rank: 3,
+          image: "cards/3-H.png",
+        },
+        {
+          name: "4",
+          suit: "hearts",
+          rank: 4,
+          image: "cards/4-H.png",
+        },
+        {
+          name: "5",
+          suit: "hearts",
+          rank: 5,
+          image: "cards/5-H.png",
+        },
+        {
+          name: "6",
+          suit: "hearts",
+          rank: 6,
+          image: "cards/6-H.png",
+        },
+        {
+          name: "7",
+          suit: "hearts",
+          rank: 7,
+          image: "cards/7-H.png",
+        },
+        {
+          name: "8",
+          suit: "hearts",
+          rank: 8,
+          image: "cards/8-H.png",
+        },
+        {
+          name: "9",
+          suit: "hearts",
+          rank: 9,
+          image: "cards/9-H.png",
+        },
+        {
+          name: "10",
+          suit: "hearts",
+          rank: 10,
+          image: "cards/10-H.png",
+        },
+        {
+          name: "jack",
+          suit: "hearts",
+          rank: 11,
+          image: "cards/J-H.png",
+        },
+        {
+          name: "queen",
+          suit: "hearts",
+          rank: 12,
+          image: "cards/Q-H.png",
+        },
+        {
+          name: "king",
+          suit: "hearts",
+          rank: 13,
+          image: "cards/K-H.png",
+        },
+        {
+          name: "ace",
+          suit: "diamonds",
+          rank: 1,
+          image: "cards/A-D.png",
+        },
+        {
+          name: "2",
+          suit: "diamonds",
+          rank: 2,
+          image: "cards/2-D.png",
+        },
+        {
+          name: "3",
+          suit: "diamonds",
+          rank: 3,
+          image: "cards/3-D.png",
+        },
+        {
+          name: "4",
+          suit: "diamonds",
+          rank: 4,
+          image: "cards/4-D.png",
+        },
+        {
+          name: "5",
+          suit: "diamonds",
+          rank: 5,
+          image: "cards/5-D.png",
+        },
+        {
+          name: "6",
+          suit: "diamonds",
+          rank: 6,
+          image: "cards/6-D.png",
+        },
+        {
+          name: "7",
+          suit: "diamonds",
+          rank: 7,
+          image: "cards/7-D.png",
+        },
+        {
+          name: "8",
+          suit: "diamonds",
+          rank: 8,
+          image: "cards/8-D.png",
+        },
+        {
+          name: "9",
+          suit: "diamonds",
+          rank: 9,
+          image: "cards/9-D.png",
+        },
+        {
+          name: "10",
+          suit: "diamonds",
+          rank: 10,
+          image: "cards/10-D.png",
+        },
+        {
+          name: "jack",
+          suit: "diamonds",
+          rank: 11,
+          image: "cards/J-D.png",
+        },
+        {
+          name: "queen",
+          suit: "diamonds",
+          rank: 12,
+          image: "cards/Q-D.png",
+        },
+        {
+          name: "king",
+          suit: "diamonds",
+          rank: 13,
+          image: "cards/K-D.png",
+        },
+        {
+          name: "ace",
+          suit: "clubs",
+          rank: 1,
+          image: "cards/A-C.png",
+        },
+        {
+          name: "2",
+          suit: "clubs",
+          rank: 2,
+          image: "cards/2-C.png",
+        },
+        {
+          name: "3",
+          suit: "clubs",
+          rank: 3,
+          image: "cards/3-C.png",
+        },
+        {
+          name: "4",
+          suit: "clubs",
+          rank: 4,
+          image: "cards/4-C.png",
+        },
+        {
+          name: "5",
+          suit: "clubs",
+          rank: 5,
+          image: "cards/5-C.png",
+        },
+        {
+          name: "6",
+          suit: "clubs",
+          rank: 6,
+          image: "cards/6-C.png",
+        },
+        {
+          name: "7",
+          suit: "clubs",
+          rank: 7,
+          image: "cards/7-C.png",
+        },
+        {
+          name: "8",
+          suit: "clubs",
+          rank: 8,
+          image: "cards/8-C.png",
+        },
+        {
+          name: "9",
+          suit: "clubs",
+          rank: 9,
+          image: "cards/9-C.png",
+        },
+        {
+          name: "10",
+          suit: "clubs",
+          rank: 10,
+          image: "cards/10-C.png",
+        },
+        {
+          name: "jack",
+          suit: "clubs",
+          rank: 11,
+          image: "cards/J-C.png",
+        },
+        {
+          name: "queen",
+          suit: "clubs",
+          rank: 12,
+          image: "cards/Q-C.png",
+        },
+        {
+          name: "king",
+          suit: "clubs",
+          rank: 13,
+          image: "cards/K-C.png",
+        },
+        {
+          name: "ace",
+          suit: "spades",
+          rank: 1,
+          image: "cards/A-S.png",
+        },
+        {
+          name: "2",
+          suit: "spades",
+          rank: 2,
+          image: "cards/2-S.png",
+        },
+        {
+          name: "3",
+          suit: "spades",
+          rank: 3,
+          image: "cards/3-S.png",
+        },
+        {
+          name: "4",
+          suit: "spades",
+          rank: 4,
+          image: "cards/4-S.png",
+        },
+        {
+          name: "5",
+          suit: "spades",
+          rank: 5,
+          image: "cards/5-S.png",
+        },
+        {
+          name: "6",
+          suit: "spades",
+          rank: 6,
+          image: "cards/6-S.png",
+        },
+        {
+          name: "7",
+          suit: "spades",
+          rank: 7,
+          image: "cards/7-S.png",
+        },
+        {
+          name: "8",
+          suit: "spades",
+          rank: 8,
+          image: "cards/8-S.png",
+        },
+        {
+          name: "9",
+          suit: "spades",
+          rank: 9,
+          image: "cards/9-S.png",
+        },
+        {
+          name: "10",
+          suit: "spades",
+          rank: 10,
+          image: "cards/10-S.png",
+        },
+        {
+          name: "jack",
+          suit: "spades",
+          rank: 11,
+          image: "cards/J-S.png",
+        },
+        {
+          name: "queen",
+          suit: "spades",
+          rank: 12,
+          image: "cards/Q-S.png",
+        },
+        {
+          name: "king",
+          suit: "spades",
+          rank: 13,
+          image: "cards/K-S.png",
+        },
+      ];
+      gameDeck = createNewDeck();
+    }
     // Deal 2 cards to player and dealer respectively
     playerHand.push(dealCard(gameDeck));
     dealerHand.push(dealCard(gameDeck));
@@ -720,13 +1034,11 @@ var main = function (input) {
       // change game mode
       currentGameMode = GAME_HIT_OR_STAND;
     }
-    console.log("CHANGED");
     return outputMessage;
   }
 
   // Hit or stand
   if (currentGameMode == GAME_HIT_OR_STAND) {
-    console.log("HITORSTAND");
     // player hit
     if (input == "hit") {
       playerHand.push(dealCard(gameDeck));
@@ -742,7 +1054,6 @@ var main = function (input) {
         playerHandTotalValue +
         "</h2>" +
         '<h2> Please input "hit" or "stand" </h2>';
-      console.log(outputMessage);
     }
     // player stand
     else if (input == "stand") {
@@ -753,7 +1064,6 @@ var main = function (input) {
         dealerHand.push(gameDeck.pop());
         dealerHandTotalValue = calculateTotalHand(dealerHand);
       }
-      console.log("DEALERHANDVALUE", dealerHandTotalValue);
       // compare total hand value
       // same value -> tie
       if (playerHandTotalValue < 22 && dealerHandTotalValue < 22) {
@@ -829,17 +1139,6 @@ var main = function (input) {
       document.querySelector("#start-button").disabled = false;
       document.querySelector("#hit-button").disabled = true;
       document.querySelector("#stand-button").disabled = true;
-      console.log("continue");
-    } else if (input == "restart") {
-      currentGameMode = GAME_START;
-      playerHand = [];
-      dealerHand = [];
-      playerWins = 0;
-      dealerWins = 0;
-      ties = 0;
-      noWins = 0;
-      scoreBoardOutput(dealerWins, playerWins, ties, noWins);
-      console.log("restart");
     }
 
     //input validation
